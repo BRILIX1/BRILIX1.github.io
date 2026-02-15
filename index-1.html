@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brilix - Maglie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra di Navigazione -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Menu sinistra -->
+            <div class="nav-menu-left">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="prodotti.html" class="nav-link">Prodotti</a>
+            </div>
+
+            <!-- Logo al centro -->
+            <div class="nav-logo">
+                <img id="logo" src="logo.jpeg" alt="Brilix Logo">
+            </div>
+
+            <!-- Menu destra -->
+            <div class="nav-menu-right">
+                <a href="chi-siamo.html" class="nav-link">Chi Siamo</a>
+                <a href="contatti.html" class="nav-link">Contatti</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenuto principale -->
+    <main>
+        <section class="hero">
+            <h1>Benvenuto in Brilix</h1>
+            <p>Le migliori maglie per lo stile che ami</p>
+            <button class="cta-button">Scopri la Collezione</button>
+        </section>
+
+        <!-- Categorie Prodotti -->
+        <section class="categories">
+            <h2>Le Nostre Collezioni</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">👕</div>
+                    <h3>Maglie Casual</h3>
+                    <p>Comfort e stile per il tuo quotidiano</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎽</div>
+                    <h3>Maglie Sport</h3>
+                    <p>Perfette per l'allenamento e il movimento</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">✨</div>
+                    <h3>Maglie Premium</h3>
+                    <p>Qualità superiore e design esclusivo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perché Scegliere Brilix -->
+        <section class="features">
+            <h2>Perché Scegliere Brilix</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Qualità Garantita</h3>
+                    <p>Materiali selezionati con cura per durabilità e comfort</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Consegna Veloce</h3>
+                    <p>Spedizione entro 24/48 ore in tutta Italia</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Reso Facile</h3>
+                    <p>30 giorni per il reso senza domande</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Prezzi Competitivi</h3>
+                    <p>Le migliori offerte sul mercato</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prodotti in Evidenza -->
+        <section class="featured-products">
+            <h2>Prodotti in Evidenza</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">Maglia 1</div>
+                    <h3>Maglia Classica Nera</h3>
+                    <p class="price">€ 29,99</p>
+                    <button class="btn-small">Aggiungi al Carrello</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Maglia 2</div>
+                    <h3>Maglia Bianca Premium</h3>
+                    <p class="price">€ 39,99</p>
+                    <button class="btn-small">Aggiungi al Carrello</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Maglia 3</div>
+                    <h3>Maglia Colorata Limited</h3>
+                    <p class="price">€ 34,99</p>
+                    <button class="btn-small">Aggiungi al Carrello</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <h2>Rimani Aggiornato</h2>
+            <p>Iscriviti alla nostra newsletter per offerte esclusive e nuove collezioni</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="La tua email" required>
+                <button>Iscriviti</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Brilix. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scorrendo verso il basso - nascondi navbar
+                navbar.classList.add('hide-navbar');
+            } else {
+                // Scorrendo verso l'alto - mostra navbar
+                navbar.classList.remove('hide-navbar');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+</body>
+</html>

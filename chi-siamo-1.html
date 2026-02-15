@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo - Brilix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra di Navigazione -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Menu sinistra -->
+            <div class="nav-menu-left">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="prodotti.html" class="nav-link">Prodotti</a>
+            </div>
+
+            <!-- Logo al centro -->
+            <div class="nav-logo">
+                <img id="logo" src="logo.jpeg" alt="Brilix Logo">
+            </div>
+
+            <!-- Menu destra -->
+            <div class="nav-menu-right">
+                <a href="chi-siamo.html" class="nav-link">Chi Siamo</a>
+                <a href="contatti.html" class="nav-link">Contatti</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenuto principale -->
+    <main>
+        <section class="page-header">
+            <h1>Chi Siamo</h1>
+            <p>La storia dietro Brilix</p>
+        </section>
+
+        <!-- Sezione Story -->
+        <section class="about-section">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>La Nostra Storia</h2>
+                    <p>
+                        Brilix nasce da una passione: quella di creare maglie di qualità che rispecchino lo stile di chi le indossa.
+                        Fondato nel 2026, il nostro brand si è impegnato a offrire prodotti autentici, sostenibili e alla moda.
+                    </p>
+                    <p>
+                        Ogni maglia è realizzata con cura, utilizzando materiali premium e processi di produzione etici.
+                        Crediamo che la qualità non debba essere un lusso, ma uno standard.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Missione e Valori -->
+        <section class="mission-section">
+            <h2>La Nostra Missione</h2>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <h3>🎯 Qualità</h3>
+                    <p>Produciamo maglie che durano nel tempo, con materiali scelti accuratamente per il massimo comfort.</p>
+                </div>
+                <div class="mission-card">
+                    <h3>♻️ Sostenibilità</h3>
+                    <p>Ci impegniamo a ridurre l'impatto ambientale attraverso processi di produzione responsabili.</p>
+                </div>
+                <div class="mission-card">
+                    <h3>🌍 Accessibilità</h3>
+                    <p>Vogliamo che stile e qualità siano accessibili a tutti, con prezzi giusti e competitivi.</p>
+                </div>
+                <div class="mission-card">
+                    <h3>❤️ Comunità</h3>
+                    <p>Ascoltiamo i nostri clienti e costruiamo una comunità di persone che amano il nostro brand.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Team -->
+        <section class="team-section">
+            <h2>Il Nostro Team</h2>
+            <p>Un gruppo di persone appassionate che lavora ogni giorno per offrire il meglio.</p>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">👔</div>
+                    <h3>miki</h3>
+                    <p>Fondatore & CEO</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">👩‍💼</div>
+                    <h3>marcello ciambriello</h3>
+                    <p>Design Director</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">👨‍💻</div>
+                    <h3>alessio ciambriello</h3>
+                    <p>Operations Manager</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Brilix. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scorrendo verso il basso - nascondi navbar
+                navbar.classList.add('hide-navbar');
+            } else {
+                // Scorrendo verso l'alto - mostra navbar
+                navbar.classList.remove('hide-navbar');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+</body>
+</html>

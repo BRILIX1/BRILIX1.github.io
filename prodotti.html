@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodotti - Brilix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra di Navigazione -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Menu sinistra -->
+            <div class="nav-menu-left">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="prodotti.html" class="nav-link">Prodotti</a>
+            </div>
+
+            <!-- Logo al centro -->
+            <div class="nav-logo">
+                <img id="logo" src="logo.jpeg" alt="Brilix Logo">
+            </div>
+
+            <!-- Menu destra -->
+            <div class="nav-menu-right">
+                <a href="chi-siamo.html" class="nav-link">Chi Siamo</a>
+                <a href="contatti.html" class="nav-link">Contatti</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenuto principale -->
+    <main>
+        <section class="page-header">
+            <h1>Il Nostro Catalogo</h1>
+            <p>Scopri la nostra collezione completa di maglie di qualità</p>
+        </section>
+
+        <!-- Filtri -->
+        <section class="filters">
+            <h3>Filtra per:</h3>
+            <button class="filter-btn active">Tutti</button>
+            <button class="filter-btn">Casual</button>
+            <button class="filter-btn">Sport</button>
+            <button class="filter-btn">Premium</button>
+        </section>
+
+        <!-- Griglia Prodotti -->
+        <section class="all-products">
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">Maglia 1</div>
+                    <h3>Maglia Classica Nera</h3>
+                    <p class="category">Casual</p>
+                    <p class="price">€ 29,99</p>
+                    <button class="btn-small">Aggiungi al Carrello</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Brilix. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scorrendo verso il basso - nascondi navbar
+                navbar.classList.add('hide-navbar');
+            } else {
+                // Scorrendo verso l'alto - mostra navbar
+                navbar.classList.remove('hide-navbar');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+</body>
+</html>

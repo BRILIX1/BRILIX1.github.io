@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - Brilix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra di Navigazione -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Menu sinistra -->
+            <div class="nav-menu-left">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="prodotti.html" class="nav-link">Prodotti</a>
+            </div>
+
+            <!-- Logo al centro -->
+            <div class="nav-logo">
+                <img id="logo" src="logo.jpeg" alt="Brilix Logo">
+            </div>
+
+            <!-- Menu destra -->
+            <div class="nav-menu-right">
+                <a href="chi-siamo.html" class="nav-link">Chi Siamo</a>
+                <a href="contatti.html" class="nav-link">Contatti</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenuto principale -->
+    <main>
+        <section class="page-header">
+            <h1>Contattaci</h1>
+            <p>Siamo qui per aiutarti. Mandaci un messaggio!</p>
+        </section>
+
+        <!-- Sezione Contatti -->
+        <section class="contact-section">
+            <div class="contact-container">
+                <!-- Info di contatto -->
+                <div class="contact-info">
+                    <h2>Informazioni di Contatto</h2>
+                    
+                    <div class="info-item">
+                        <h3>📍 Indirizzo</h3>
+                        <p>Via della Moda, 123<br>20100 Milano, Italia</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>📞 Telefono</h3>
+                        <p>+39 02 123 4567</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>📧 Email</h3>
+                        <p>info@brilix.it<br>support@brilix.it</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>🕐 Orari di Apertura</h3>
+                        <p>Lunedì - Venerdì: 9:00 - 18:00<br>Sabato: 10:00 - 16:00<br>Domenica: Chiuso</p>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>Seguici sui Social</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">📘</a>
+                            <a href="#" class="social-icon">📷</a>
+                            <a href="#" class="social-icon">🐦</a>
+                            <a href="#" class="social-icon">▶️</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form di contatto -->
+                <div class="contact-form">
+                    <h2>Inviaci un Messaggio</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Telefono</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="oggetto">Oggetto</label>
+                            <input type="text" id="oggetto" name="oggetto" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="messaggio">Messaggio</label>
+                            <textarea id="messaggio" name="messaggio" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Invia Messaggio</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2>Domande Frequenti</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>Quali sono i tempi di consegna?</h3>
+                    <p>Consegniamo entro 24/48 ore in tutta Italia con corriere selezionato.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Come faccio a fare un reso?</h3>
+                    <p>Abbiamo una politica di reso di 30 giorni senza domande. Contattaci per i dettagli.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Quali metodi di pagamento accettate?</h3>
+                    <p>Accettiamo carte di credito, PayPal, bonifico bancario e altri metodi digitali.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>I vostri prodotti sono sostenibili?</h3>
+                    <p>Sì! Utilizziamo materiali eco-friendly e processi di produzione responsabili.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Brilix. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scorrendo verso il basso - nascondi navbar
+                navbar.classList.add('hide-navbar');
+            } else {
+                // Scorrendo verso l'alto - mostra navbar
+                navbar.classList.remove('hide-navbar');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+</body>
+</html>
